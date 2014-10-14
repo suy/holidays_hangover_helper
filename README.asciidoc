@@ -1,0 +1,37 @@
+Holidays Hangover Helper
+========================
+
+Simple GUI and CLI application to assist in the chores that I tipically do to
+pictures and videos after holidays:
+
+- Shift time and date of different sets (coming from different devices) to have
+  them in sync.
+- Rename them according to the same naming conventions. Helps in having them
+  sorted for proper watching when not all applications sort them by metadata
+  fields (most of my videos from past holidays don't have metadata at all, and
+  some picture applications strip the EXIF date fields).
+
+Installation
+------------
+
+The usual. Run:
+
+----
+gem install holidays_hangover_helper
+----
+
+Usage
+-----
+
+Command line application:: hhh
+Graphical application:: holidays-hangover-helper
+
+
+Contributing
+------------
+
+. Fork it (https://github.com/suy/holidays_hangover_helper/fork).
+. Create your feature branch (`git checkout -b my-new-feature`).
+. Commit your changes (`git commit -am 'Add some feature'`).
+. Push to the branch (`git push origin my-new-feature`).
+. Create a new Pull Request.
