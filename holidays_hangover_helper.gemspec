@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = HolidaysHangoverHelper::VERSION
   spec.authors       = ["Alejandro Exojo"]
   spec.email         = ["suy@badopi.org"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Helper for chores done to pictures and videos after holydays}
+  # spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.homepage      = "http://github.com/suy/holidays_hangover_helper"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

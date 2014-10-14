@@ -1,6 +1,6 @@
 require 'minitest_helper'
 
-class TestHolidaysHangoverHelper < MiniTest::Unit::TestCase
+class TestHolidaysHangoverHelper < MiniTest::Test
   def test_that_it_has_a_version_number
     refute_nil ::HolidaysHangoverHelper::VERSION
   end
