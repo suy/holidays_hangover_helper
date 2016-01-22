@@ -1,6 +1,9 @@
 Holidays Hangover Helper
 ========================
 
+WARNING: This is a work in progress. This document doesn't reflect the current
+state.
+
 Simple GUI and CLI application to assist in the chores that I tipically do to
 pictures and videos after holidays:
 
@@ -10,6 +13,25 @@ pictures and videos after holidays:
   sorted for proper watching when not all applications sort them by metadata
   fields (most of my videos from past holidays don't have metadata at all, and
   some picture applications strip the EXIF date fields).
+
+I started with some single line scripts with everything hardcoded and adjusted
+before each use. For example:
+
+ # Add one hour to the pictures' metadata.
+ exiv2 -a '+01:00:00' *JPG
+ # Modify the time stamp of certain files.
+ find . \( -iname '*.mp4' -or -iname '*.jpg' \) -exec touch -r {} -d '+1 year' {} \;
+ # Rename the pictures according to the file metadata.
+ find . -iname '*.jpg' -exec exiv2 -F -t -r %Y-%m-%d_%H-%M-%S {} \;
+ # Rename the videos according to their time stamp.
+ for file in *.mp4 ; do
+     name=`stat --format %y $file | cut -c 1-19 | tr " :" "_-"`.mp4
+     echo $file "-->" $name
+     mv -i $file $name
+ done
+
+Then I wrote a simple Ruby script with thor, that now I'm rewriting to make a
+"proper" Ruby gem, and learn about everything in the process.
 
 Installation
 ------------
